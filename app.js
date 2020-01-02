@@ -63,7 +63,7 @@ client.on('guildMemberAdd', member => {
     member.guild.channels.find(c => c.id === '645354390492020789').send(message);
 });
 
-client.on('guildMemberAdd', member => {
+client.on('guildMemberRemove', member => {
     member.guild.channels.find(c => c.id === '645354390492020789').send(`We're sorry to see you go ${member.user.username}!`);
 });
 

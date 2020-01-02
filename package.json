@@ -1,0 +1,16 @@
+{
+  "name": "sweatingbot",
+  "version": "1.0.0",
+  "description": "Discord Bot for SweatingGST",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Default",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "moment": "^2.24.0",
+    "nodemon": "^2.0.2"
+  }
+}

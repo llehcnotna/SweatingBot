@@ -6,23 +6,23 @@ module.exports.run = async (client, message, args) => {
     // >help
     
     if(args[0] === 'botinfo'){
-        message.reply('**Usage:** \`>botinfo\`');
+        message.reply('**Usage:** \`${config.prefix}botinfo\`');
         return;
     };
     if(args[0] === 'help'){
-        message.reply('**Usage:** \`>help\`');
+        message.reply('**Usage:** \`${config.prefix}help\`');
         return;
     };
     if(args[0] === 'member'){
-        message.reply('**Usage:** \`>member @user\`');
+        message.reply('**Usage:** \`${config.prefix}member @user\`');
         return;
     };
     if(args[0] === 'ping') {
-        message.reply('**Usage:** \`>ping\`');
+        message.reply('**Usage:** \`${config.prefix}ping\`');
         return;
     };
     if(args[0] === 'uptime'){
-        message.reply('**Usage:** \`>uptime\`');
+        message.reply('**Usage:** \`${config.prefix}uptime\`');
         return;
     };
 

@@ -27,7 +27,7 @@ module.exports.run = async (client, message, args) => {
             return message.channel.send(`**${message.author.username}**, Your color has been removed successfully.`);
         };
         if(!args[0]) return message.channel.send(roleEmbed);
-        if(!roleName) return message.channel.send(`Please use a color that is listed. See listed colors using ${config.prefix}roles`);
+        if(!roleName) return message.channel.send(`Please use a color that is listed. See listed colors using \`${config.prefix}roles\``);
         if(existingRole) await message.member.removeRole(existingRole);
         if(acceptedRoles.includes(roleName.id)) message.member.addRole(roleName);
 

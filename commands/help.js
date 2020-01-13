@@ -9,6 +9,10 @@ module.exports.run = async (client, message, args) => {
         message.reply(`\`\`\`${config.prefix}botinfo\n\nShows information about this bot.\`\`\``);
         return;
     };
+    if(args[0] === 'color'){
+        message.reply(`\`\`\`${config.prefix}color | colour <colorname>\n\nChanges your color based on colors available.\`\`\``);
+        return;
+    };
     if(args[0] === 'help'){
         message.reply(`\`\`\`${config.prefix}help\n\nShows the default help menu.\`\`\``);
         return;
@@ -37,6 +41,7 @@ module.exports.run = async (client, message, args) => {
     .setDescription(`Prefix: **${config.prefix}**`)
     .addField('**__Commands__**', `For more information on a specific command use \`${config.prefix}help <command>\``)
     .addField(`botinfo`, 'Sends information about this bot.')
+    .addField(`color`, `Lets you choose a color on the server.`)
     .addField(`help`, 'Sends this message.')
     .addField(`kick`, 'kicks the mentioned user.')
     .addField(`member`, 'adds or removes Sweating role from user.')

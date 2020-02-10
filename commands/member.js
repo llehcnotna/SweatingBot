@@ -4,7 +4,13 @@ module.exports.run = async (client, message, args) => {
 
     //member @user
 
-    if(!message.member.hasPermission('MANAGE_ROLES')) return;
+    // Error Embed (officerRole not found)
+    const officerError = new Discord.RichEmbed()
+    .setColor('#5BACEA')
+    .setDescription(`**${message.author.username}**, you do not have permission to use this command please contact an \`Officer\``);
+
+    if(!message.member.roles.find(r => r.name === 'Officer'))
+    return message.channel.send(officerError);
 
     let mUser = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
 
